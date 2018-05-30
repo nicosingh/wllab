@@ -76,13 +76,13 @@
                   <wldeploy action="deploy"
                             debug="false"
                             remote="true"
-                            source="target/wllab.war"
+                            source="${env.ARTIFACT_PATH}"
                             upload="true"
-                            name="wllab"
-                            user="weblogic"
-                            password="welcome1"
-                            adminurl="t3://34.207.85.47:7001"
-                            targets="AdminServer"/>
+                            name="${env.WEBLOGIC_APP_NAME}"
+                            user="${env.WEBLOGIC_USER}"
+                            password="${env.WEBLOGIC_PASS}"
+                            adminurl="t3://${env.WEBLOGIC_URL}:7001"
+                            targets="${env.WEBLOGIC_TARGET}"/>
                 </target>
               </configuration>
               <goals>
