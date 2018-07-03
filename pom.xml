@@ -5,7 +5,7 @@
 
   <groupId>guga</groupId>
   <artifactId>wllab</artifactId>
-  <version>1.0.0</version>
+  <version>${env.BUILD_NUMBER}</version>
   <packaging>war</packaging>
 
   <name>wllab Maven Webapp</name>
