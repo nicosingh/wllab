@@ -52,6 +52,17 @@
         <plugin>
           <artifactId>maven-war-plugin</artifactId>
           <version>3.2.0</version>
+          <configuration>
+          <archive>
+             <index>true</index>
+             <manifest>
+                <addClasspath>true</addClasspath>
+             </manifest>
+             <manifestEntries>
+                <Implementation-Version>${build.number}</Implementation-Version>
+             </manifestEntries>
+          </archive>
+        </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
