@@ -5,7 +5,7 @@
 
   <groupId>guga</groupId>
   <artifactId>wllab</artifactId>
-  <version>${build.number}</version>
+  <version>${env.BUILD_NUMBER}</version>
   <packaging>war</packaging>
 
   <name>wllab Maven Webapp</name>
@@ -52,17 +52,6 @@
         <plugin>
           <artifactId>maven-war-plugin</artifactId>
           <version>3.2.0</version>
-          <configuration>
-          <archive>
-             <index>true</index>
-             <manifest>
-                <addClasspath>true</addClasspath>
-             </manifest>
-             <manifestEntries>
-                <Implementation-Version>${build.number}</Implementation-Version>
-             </manifestEntries>
-          </archive>
-        </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
